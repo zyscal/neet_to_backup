@@ -1,0 +1,109 @@
+[106341][      debug] Loading models took 28.995ms
+[106343][      debug] Sqlite write daemon: starting up
+[106343][      debug] Sqlite write daemon: set up complete, waiting for connections
+[106341][environment] CWD = /home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company
+[106341][environment] No .inferconfig file found
+[106341][environment] Project root = /home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company
+[106341][environment] INFER_ARGS =   
+[106341][environment] command line arguments:   infer -- javac Main.java
+[106341][environment] Available memory at startup: 5223 MB
+[106341][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[106341][environment] Scheduler: file
+[106341][environment] Cores used: 2
+[106341][environment] Infer version v1.1.0
+[106341][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[106341][environment] 
+[106341][   progress] Capturing in javac mode...
+[106341][      debug] Current working directory: '/home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company'
+[106341][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company/infer-out/tmp/javac_args.tmp.807a2b' 2>'/home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company/infer-out/tmp/javac.tmp.68d55d.out'
+[106341][      debug] *** Failed: exited with code 1!
+[106341][      debug] 
+[106341][      debug] Trying to execute: javac '@/home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company/infer-out/tmp/javac_args.tmp.807a2b' 2>'/home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company/infer-out/tmp/javac.tmp.68d55d.out'
+[106341][   user err] 
+*** Failed to execute compilation command: exited with code 1
+*** Command: javac '@/home/zyscal/Documents/need_to_backup/udpserver2_BC26/src/main/java/com/company/infer-out/tmp/javac_args.tmp.807a2b'
+*** Output:
+[parsing started RegularFileObject[Main.java]]
+[parsing completed 16ms]
+[search path for source files: .]
+[search path for class files: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/classes,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar,/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar,.]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/net/DatagramSocket.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/net/InetAddress.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/net/SocketException.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/net/UnknownHostException.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/InterruptedException.class)]]
+[checking com.company.Main]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/AutoCloseable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Throwable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/net/SocketAddress.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/net/DatagramSocketImpl.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Byte.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Character.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Short.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Float.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Double.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Boolean.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Void.class)]]
+Main.java:34: error: cannot find symbol
+        Leshanthread b = new Leshanthread(model);
+        ^
+  symbol:   class Leshanthread
+  location: class Main
+Main.java:34: error: cannot find symbol
+        Leshanthread b = new Leshanthread(model);
+                             ^
+  symbol:   class Leshanthread
+  location: class Main
+Main.java:35: error: cannot find symbol
+        Anjaythread thread_handle_LwM2M_client = new Anjaythread(model,socket_anjay );
+        ^
+  symbol:   class Anjaythread
+  location: class Main
+Main.java:35: error: cannot find symbol
+        Anjaythread thread_handle_LwM2M_client = new Anjaythread(model,socket_anjay );
+                                                     ^
+  symbol:   class Anjaythread
+  location: class Main
+Main.java:36: error: cannot find symbol
+        Anjaythread thread_handle_CoAP_file_client = new Anjaythread(model, socket_coap_file);
+        ^
+  symbol:   class Anjaythread
+  location: class Main
+Main.java:36: error: cannot find symbol
+        Anjaythread thread_handle_CoAP_file_client = new Anjaythread(model, socket_coap_file);
+                                                         ^
+  symbol:   class Anjaythread
+  location: class Main
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Thread.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/sun/misc/Contended.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Runnable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/System.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/PrintStream.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Appendable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/Closeable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/FilterOutputStream.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/io/Flushable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/Comparable.class)]]
+[loading ZipFileIndexFileObject[/usr/lib/jvm/java-8-openjdk-amd64/lib/ct.sym(META-INF/sym/rt.jar/java/lang/CharSequence.class)]]
+[total 146ms]
+6 errors
+
+*** Infer needs a working compilation command to run.
+
+[106341][   user err] Raised at Stdlib__buffer.add_channel in file "buffer.ml", line 273, characters 18-35
+Called from Stdio__In_channel.input_all.loop in file "src/in_channel.ml", line 44, characters 4-47
+Called from Stdio__In_channel.input_all in file "src/in_channel.ml", line 47, characters 6-13
+
+[106343][      debug] Sqlite write daemon: terminating

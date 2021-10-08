@@ -1,0 +1,25 @@
+[102049][      debug] Loading models took 29.178ms
+[102050][      debug] Sqlite write daemon: starting up
+[102050][      debug] Sqlite write daemon: set up complete, waiting for connections
+[102049][environment] CWD = /home/zyscal/Documents/need_to_backup/lwm2m_server/leshan_myown_server
+[102049][environment] No .inferconfig file found
+[102049][environment] Project root = /home/zyscal/Documents/need_to_backup/lwm2m_server/leshan_myown_server
+[102049][environment] INFER_ARGS =   
+[102049][environment] command line arguments:   infer -- gradle
+[102049][environment] Available memory at startup: 1229 MB
+[102049][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[102049][environment] Scheduler: file
+[102049][environment] Cores used: 2
+[102049][environment] Infer version v1.1.0
+[102049][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[102049][environment] 
+[102049][   progress] Capturing in gradle mode...
+[102049][   progress] gradle-stdout: sh: 1: exec: gradle: not found
+[102049][ extern err] Error executing:   gradle --version
+exited with code 127
+
+[102049][ extern err] Raised at Stdlib.input_line.scan in file "stdlib.ml", line 449, characters 14-31
+Called from Stdio__In_channel.input_line_exn in file "src/in_channel.ml" (inlined), line 68, characters 13-30
+Called from IBase__Utils.with_channel_in in file "src/base/Utils.ml", line 260, characters 11-44
+
+[102050][      debug] Sqlite write daemon: terminating

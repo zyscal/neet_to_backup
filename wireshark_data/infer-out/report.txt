@@ -1,0 +1,40 @@
+#0
+src/test/java/test/killanjay.java:17: error: Resource Leak
+  resource of type `java.lang.Process` acquired by call to `exec(...)` at line 12 is not released after line 17.
+  15.           }
+  16.           try {
+  17. >             int status = pro.waitFor();
+  18.           } catch (InterruptedException e) {
+  19.               e.printStackTrace();
+
+#1
+src/test/java/test/regAnjay.java:13: error: Resource Leak
+  resource of type `java.lang.Process` acquired by call to `exec(...)` at line 13 is not released after line 13.
+  11.           Process pro = null;
+  12.           try {
+  13. >             pro = runtime.exec(path);
+  14.           } catch (IOException e) {
+  15.               e.printStackTrace();
+
+#2
+src/main/java/NB_CoAP_RTT.java:189: error: Inefficient Keyset Iterator
+  Accessing a value using a key that was retrieved from a `keySet` iterator. It is more efficient to use an iterator on the `entrySet` of the map, avoiding the extra `HashMap.get(key)` lookup.
+  187.               {
+  188.   //                System.out.println(wait_to_match.get(i) + " : " + history_max.get(i));
+  189. >                 if(wait_to_match.get(i) == history_max.get(i))
+  190.                   {
+  191.                       packet_loss_num++;
+
+#3
+src/main/java/NB_CoAP_RTT.java:197: error: Inefficient Keyset Iterator
+  Accessing a value using a key that was retrieved from a `keySet` iterator. It is more efficient to use an iterator on the `entrySet` of the map, avoiding the extra `HashMap.get(key)` lookup.
+  195.                       System.out.println("there is maybe a problem , the message id is : " + i);
+  196.                   }
+  197. >                 cal_rtt_para.setRetransmission_cause_of_small_RTO(cal_rtt_para.getRetransmission_cause_of_small_RTO()+history_max.get(i) - wait_to_match.get(i));
+  198.               }
+  199.   
+
+Found 4 issues
+                                Issue Type(ISSUED_TYPE_ID): #
+                              Resource Leak(RESOURCE_LEAK): 2
+  Inefficient Keyset Iterator(INEFFICIENT_KEYSET_ITERATOR): 2

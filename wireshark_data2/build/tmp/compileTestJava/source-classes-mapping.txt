@@ -1,0 +1,6 @@
+test/killanjay.java
+ test.killanjay
+test/regAnjay.java
+ test.regAnjay
+test/test.java
+ test.test

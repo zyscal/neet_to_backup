@@ -1,0 +1,291 @@
+[109801][      debug] Loading models took 29.31ms
+[109803][      debug] Sqlite write daemon: starting up
+[109803][      debug] Sqlite write daemon: set up complete, waiting for connections
+[109801][environment] CWD = /home/zyscal/Documents/need_to_backup/wireshark_data
+[109801][environment] No .inferconfig file found
+[109801][environment] Project root = /home/zyscal/Documents/need_to_backup/wireshark_data
+[109801][environment] INFER_ARGS =   
+[109801][environment] command line arguments:   infer -- gradle build
+[109801][environment] Available memory at startup: 2479 MB
+[109801][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[109801][environment] Scheduler: file
+[109801][environment] Cores used: 2
+[109801][environment] Infer version v1.1.0
+[109801][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[109801][environment] 
+[109801][   progress] Capturing in gradle mode...
+[109801][environment] openjdk version "1.8.0_282"
+OpenJDK Runtime Environment (build 1.8.0_282-8u282-b08-0ubuntu1~20.04-b08)
+OpenJDK 64-Bit Server VM (build 25.282-b08, mixed mode)
+ javac 1.8.0_282
+ 
+------------------------------------------------------------
+Gradle 4.4.1
+------------------------------------------------------------
+
+Build time:   2012-12-21 00:00:00 UTC
+Revision:     none
+
+Groovy:       2.4.17
+Ant:          Apache Ant(TM) version 1.10.7 compiled on October 24 2019
+JVM:          1.8.0_282 (Private Build 25.282-b08)
+OS:           Linux 5.4.0-70-generic amd64
+
+
+[109801][environment] 
+[109801][   progress] [GRADLE] gradle --debug build >'/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_output.tmp.f25a89.log'
+[109801][   progress] [GRADLE] running gradle took 10.191s
+[109801][   progress] 
+[109801][environment] openjdk version "1.8.0_282"
+OpenJDK Runtime Environment (build 1.8.0_282-8u282-b08-0ubuntu1~20.04-b08)
+OpenJDK 64-Bit Server VM (build 25.282-b08, mixed mode)
+ javac 1.8.0_282
+ 
+------------------------------------------------------------
+Gradle 4.4.1
+------------------------------------------------------------
+
+Build time:   2012-12-21 00:00:00 UTC
+Revision:     none
+
+Groovy:       2.4.17
+Ant:          Apache Ant(TM) version 1.10.7 compiled on October 24 2019
+JVM:          1.8.0_282 (Private Build 25.282-b08)
+OS:           Linux 5.4.0-70-generic amd64
+
+
+[109801][environment] 
+[109801][   progress] [GRADLE] gradle --debug build >'/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_output.tmp.f25a89.log'
+[109801][   progress] [GRADLE] running gradle took 10.191s
+[109801][   progress] 
+[109801][environment] openjdk version "1.8.0_282"
+OpenJDK Runtime Environment (build 1.8.0_282-8u282-b08-0ubuntu1~20.04-b08)
+OpenJDK 64-Bit Server VM (build 25.282-b08, mixed mode)
+ javac 1.8.0_282
+ 
+------------------------------------------------------------
+Gradle 4.4.1
+------------------------------------------------------------
+
+Build time:   2012-12-21 00:00:00 UTC
+Revision:     none
+
+Groovy:       2.4.17
+Ant:          Apache Ant(TM) version 1.10.7 compiled on October 24 2019
+JVM:          1.8.0_282 (Private Build 25.282-b08)
+OS:           Linux 5.4.0-70-generic amd64
+
+
+[109801][environment] 
+[109801][   progress] [GRADLE] gradle --debug build >'/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_output.tmp.f25a89.log'
+[109801][   progress] [GRADLE] running gradle took 10.191s
+[109801][   progress] 
+
+[109925][      debug] Loading models took 48.23ms
+[109924][      debug] Loading models took 47.847ms
+[109925][environment] CWD = /home/zyscal/Documents/need_to_backup/wireshark_data
+[109925][environment] No .inferconfig file found
+[109925][environment] Project root = /home/zyscal/Documents/need_to_backup/wireshark_data
+[109925][environment] INFER_ARGS =   @/tmp/args.tmp.0d9e7b
+[109925][environment] command line arguments:   /home/zyscal/Documents/infer/infer-linux64-v1.1.0/lib/infer/infer/bin/infer
+[109925][environment]                           capture -j 1 -o
+[109925][environment]                           /home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/capture_target.tmp.u96oKN
+[109925][environment]                           -- javac
+[109925][environment]                           @/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_files.tmp.c89ff7
+[109925][environment]                           -source 1.8 -target 1.8 -d
+[109925][environment]                           /home/zyscal/Documents/need_to_backup/wireshark_data/build/classes/java/test
+[109925][environment]                           -g -sourcepath  -proc:none -XDuseUnsharedTable=true
+[109925][environment]                           -classpath
+[109925][environment]                           /home/zyscal/Documents/need_to_backup/wireshark_data/build/classes/java/main:/home/zyscal/Documents/need_to_backup/wireshark_data/build/resources/main:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-streams/3.0.7/8fec97723c5ff1d3c1d362e2eebb88fb9a4c0f13/pkts-streams-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-core/3.0.7/be8ca5e291960ddb44cdc91cfcf1be60eb0ae864/pkts-core-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-sip/3.0.7/8d2170979c70b187a19a265d3840a4be4d5e506/pkts-sip-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-sdp/3.0.7/c6fe32d753b516406d4d19fea52db84a6d03531d/pkts-sdp-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-buffers/3.0.7/3ffd0b1c44434d9073ec939e613114437d0d2e7e/pkts-buffers-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/root/.gradle/caches/modules-2/files-2.1/javax.sip/jain-sip-ri/1.2.159/6ba0a848123318c5c9de7b482721f9b676d35cf3/jain-sip-ri-1.2.159.jar
+[109925][environment] Available memory at startup: 2297 MB
+[109925][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[109924][environment] CWD = /home/zyscal/Documents/need_to_backup/wireshark_data
+[109924][environment] No .inferconfig file found
+[109924][environment] Project root = /home/zyscal/Documents/need_to_backup/wireshark_data
+[109924][environment] INFER_ARGS =   @/tmp/args.tmp.5a1f3f
+[109924][environment] command line arguments:   /home/zyscal/Documents/infer/infer-linux64-v1.1.0/lib/infer/infer/bin/infer
+[109924][environment]                           capture -j 1 -o
+[109924][environment]                           /home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/capture_target.tmp.sfrgNR
+[109924][environment]                           -- javac
+[109924][environment]                           @/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_files.tmp.502419
+[109924][environment]                           -source 1.8 -target 1.8 -d
+[109924][environment]                           /home/zyscal/Documents/need_to_backup/wireshark_data/build/classes/java/main
+[109924][environment]                           -g -sourcepath  -proc:none -XDuseUnsharedTable=true
+[109924][environment]                           -classpath
+[109924][environment]                           /root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-streams/3.0.7/8fec97723c5ff1d3c1d362e2eebb88fb9a4c0f13/pkts-streams-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-core/3.0.7/be8ca5e291960ddb44cdc91cfcf1be60eb0ae864/pkts-core-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-sip/3.0.7/8d2170979c70b187a19a265d3840a4be4d5e506/pkts-sip-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-sdp/3.0.7/c6fe32d753b516406d4d19fea52db84a6d03531d/pkts-sdp-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/io.pkts/pkts-buffers/3.0.7/3ffd0b1c44434d9073ec939e613114437d0d2e7e/pkts-buffers-3.0.7.jar:/root/.gradle/caches/modules-2/files-2.1/javax.sip/jain-sip-ri/1.2.159/6ba0a848123318c5c9de7b482721f9b676d35cf3/jain-sip-ri-1.2.159.jar
+[109924][environment] Available memory at startup: 2297 MB
+[109924][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[109924][      debug] Current working directory: '/home/zyscal/Documents/need_to_backup/wireshark_data'
+[109925][      debug] Current working directory: '/home/zyscal/Documents/need_to_backup/wireshark_data'
+[109924][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_files.tmp.502419' '@/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/capture_target.tmp.sfrgNR/tmp/javac_args.tmp.91ae3c' 2>'/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/capture_target.tmp.sfrgNR/tmp/javac.tmp.18090a.out'
+[109925][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/gradle_files.tmp.c89ff7' '@/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/capture_target.tmp.u96oKN/tmp/javac_args.tmp.f6eff3' 2>'/home/zyscal/Documents/need_to_backup/wireshark_data/infer-out/tmp/capture_target.tmp.u96oKN/tmp/javac.tmp.30530b.out'
+[109925][      debug] *** Success. Logs:
+[109925][      debug] Translating 4 source files (4 classes)
+[109925][      debug] done capturing all files
+[109925][      debug] GC stats for capture:
+[109925][      debug]   minor_words: 1.48978e+07
+[109925][      debug]   promoted_words: 2.5968e+06
+[109925][      debug]   major_words: 3.80633e+06
+[109925][      debug]   minor_collections: 55
+[109925][      debug]   major_collections: 4
+[109925][      debug]   compactions: 0
+[109925][      debug]   top_heap_words: 3545600
+[109925][      debug]   
+[109925][      debug] GC stats for main_process_full:
+[109925][      debug]   minor_words: 1.65447e+07
+[109925][      debug]   promoted_words: 2.7627e+06
+[109925][      debug]   major_words: 4.49801e+06
+[109925][      debug]   minor_collections: 59
+[109925][      debug]   major_collections: 6
+[109925][      debug]   compactions: 1
+[109925][      debug]   top_heap_words: 3545600
+[109925][      debug]   
+[109925][environment] Scheduler: file
+[109925][environment] Cores used: 1
+[109925][environment] [109924][      debug] *** Success. Logs:
+[109924][      debug] Translating 9 source files (18 classes)
+[109924][      debug] done capturing all files
+[109924][      debug] GC stats for capture:
+[109924][      debug]   minor_words: 2.9471e+07
+[109924][      debug]   promoted_words: 4.0377e+06
+[109924][      debug]   major_words: 5.97621e+06
+[109924][      debug]   minor_collections: 128
+[109924][      debug]   major_collections: 5
+[109924][      debug]   compactions: 0
+[109924][      debug]   top_heap_words: 5392896
+[109924][      debug]   
+[109924][      debug] GC stats for main_process_full:
+[109924][      debug]   minor_words: 3.1118e+07
+[109924][      debug]   promoted_words: 4.20355e+06
+[109924][      debug]   major_words: 6.66785e+06
+[109924][      debug]   minor_collections: 132
+[109924][      debug]   major_collections: 7
+[109924][      debug]   compactions: 1
+[109924][      debug]   top_heap_words: 5392896
+[109924][      debug]   
+[109924][environment] Scheduler: file
+[109924][environment] Cores used: 1
+[109924][environment] 
+[109801][      debug] [GRADLE] infer processed 2 lines in 2.206s
+[109801][      debug] GC stats for capture:
+[109801][      debug]   minor_words: 649295
+[109801][      debug]   promoted_words: 154911
+[109801][      debug]   major_words: 187944
+[109801][      debug]   minor_collections: 1
+[109801][      debug]   major_collections: 2
+[109801][      debug]   compactions: 1
+[109801][      debug]   top_heap_words: 875008
+[109801][      debug]   
+[109801][   progress] Merging captured Buck targets...
+[109801][   progress] Merging type environments took 19.237ms, of which 16.806ms were spent storing the global tenv
+[109801][   progress] Merging 2 captured Buck targets took 35.688ms
+[109801][   progress] 
+[109801][environment] Parallel jobs: 2
+[109801][   progress] Found 13 source files to analyze in /home/zyscal/Documents/need_to_backup/wireshark_data/infer-out
+[109951][   progress] src/test/java/test/killanjay.java starting
+[109952][   progress] src/main/java/Simple_class/CAL_SPEED_PARA.java starting
+[109951][   progress] src/test/java/test/killanjay.java DONE
+[109951][   progress] src/test/java/test/testcase.java starting
+[109951][   progress] src/test/java/test/testcase.java DONE
+[109951][   progress] src/main/java/data_analy.java starting
+[109952][   progress] src/main/java/Simple_class/CAL_SPEED_PARA.java DONE
+[109952][   progress] src/main/java/Simple_class/CAL_RTT_PARA.java starting
+[109952][   progress] src/main/java/Simple_class/CAL_RTT_PARA.java DONE
+[109952][   progress] src/main/java/NB_UDP_calculate_speed.java starting
+[109952][   progress] src/main/java/NB_UDP_calculate_speed.java DONE
+[109952][   progress] src/main/java/NB_CoAP_RTT.java starting
+[109952][   progress] src/main/java/NB_CoAP_RTT.java DONE
+[109952][   progress] src/main/java/NB_UDP_handle_UP_Down_NON.java starting
+[109951][   progress] src/main/java/data_analy.java DONE
+[109951][   progress] src/main/java/NB_UDP_REG_UP_DOWN.java starting
+[109951][   progress] src/main/java/NB_UDP_REG_UP_DOWN.java DONE
+[109951][   progress] src/test/java/test/test.java starting
+[109951][   progress] src/test/java/test/test.java DONE
+[109951][   progress] src/test/java/test/regAnjay.java starting
+[109951][   progress] src/test/java/test/regAnjay.java DONE
+[109951][   progress] src/main/java/Simple_class/CoAP_mes.java starting
+[109951][   progress] src/main/java/Simple_class/CoAP_mes.java DONE
+[109951][   progress] src/main/java/TWONB_UDP_REG_UP_DOWN.java starting
+[109952][   progress] src/main/java/NB_UDP_handle_UP_Down_NON.java DONE
+[109951][   progress] src/main/java/TWONB_UDP_REG_UP_DOWN.java DONE
+[109801][      debug] Backend stats:
+[109801][      debug]   summary_file_try_load= 8653
+[109801][      debug]   summary_read_from_disk= 64
+[109801][      debug]   summary_cache_hits= 4836 (35%)
+[109801][      debug]   summary_cache_misses= 8653
+[109801][      debug]   ondemand_procs_analyzed= 145
+[109801][      debug]   ondemand_local_cache_hits= 6060 (95%)
+[109801][      debug]   ondemand_local_cache_misses= 304
+[109801][      debug]   proc_locker_lock_time_user= 0.00000000
+[109801][      debug]   proc_locker_lock_time_sys= 0.00000000
+[109801][      debug]   proc_locker_lock_time_wall= 0.00000000
+[109801][      debug]   proc_locker_unlock_time_user= 0.00000000
+[109801][      debug]   proc_locker_unlock_time_sys= 0.00000000
+[109801][      debug]   proc_locker_unlock_time_wall= 0.00000000
+[109801][      debug]   restart_scheduler_useful_time_user= 0.00000000
+[109801][      debug]   restart_scheduler_useful_time_sys= 0.00000000
+[109801][      debug]   restart_scheduler_useful_time_wall= 0.00000000
+[109801][      debug]   restart_scheduler_total_time_user= 0.00000000
+[109801][      debug]   restart_scheduler_total_time_sys= 0.00000000
+[109801][      debug]   restart_scheduler_total_time_wall= 0.00000000
+[109801][      debug]   
+[109801][      debug] GC stats for backend_stats.gc_stats_add.:
+[109801][      debug]   minor_words: 9.3347e+09
+[109801][      debug]   promoted_words: 5.13458e+07
+[109801][      debug]   major_words: 5.48626e+07
+[109801][      debug]   minor_collections: 8952
+[109801][      debug]   major_collections: 112
+[109801][      debug]   compactions: 0
+[109801][      debug]   top_heap_words: 4928512
+[109801][      debug]   
+[109801][      debug] GC stats for backend_stats.gc_stats_max.:
+[109801][      debug]   minor_words: 4.84367e+09
+[109801][      debug]   promoted_words: 2.921e+07
+[109801][      debug]   major_words: 3.04232e+07
+[109801][      debug]   minor_collections: 4643
+[109801][      debug]   major_collections: 61
+[109801][      debug]   compactions: 0
+[109801][      debug]   top_heap_words: 2636288
+[109801][      debug]   
+[109801][      debug] Average over 2 processes
+[109801][      debug] GC stats for backend_stats.gc_stats_average.:
+[109801][      debug]   minor_words: 4.66735e+09
+[109801][      debug]   promoted_words: 2.56729e+07
+[109801][      debug]   major_words: 2.74313e+07
+[109801][      debug]   minor_collections: 4476
+[109801][      debug]   major_collections: 56
+[109801][      debug]   compactions: 0
+[109801][      debug]   top_heap_words: 2464256
+[109801][      debug]   
+[109801][      debug] Analysis phase finished in 13.391s
+[109801][      debug] backend_stats.scheduler_process_analysis_time_user= 0.07434400
+[109801][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.02939700
+[109801][      debug] backend_stats.scheduler_process_analysis_time_wall= 13.39082474
+[109801][      debug] GC stats for analysis_scheduler:
+[109801][      debug]   minor_words: 6.60254e+06
+[109801][      debug]   promoted_words: 177195
+[109801][      debug]   major_words: 185901
+[109801][      debug]   minor_collections: 7
+[109801][      debug]   major_collections: 2
+[109801][      debug]   compactions: 1
+[109801][      debug]   top_heap_words: 875008
+[109801][      debug]   
+[109801][      debug] GC stats for report:
+[109801][      debug]   minor_words: 207355
+[109801][      debug]   promoted_words: 0
+[109801][      debug]   major_words: 6298
+[109801][      debug]   minor_collections: 0
+[109801][      debug]   major_collections: 0
+[109801][      debug]   compactions: 0
+[109801][      debug]   top_heap_words: 875008
+[109801][      debug]   
+[109801][      debug] GC stats for main_process_full:
+[109801][      debug]   minor_words: 9.4878e+06
+[109801][      debug]   promoted_words: 497586
+[109801][      debug]   major_words: 1.27425e+06
+[109801][      debug]   minor_collections: 12
+[109801][      debug]   major_collections: 6
+[109801][      debug]   compactions: 3
+[109801][      debug]   top_heap_words: 875008
+[109801][      debug]   
+[109803][      debug] Sqlite write daemon: terminating
