@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="udpserver" />
-        <module name="udpserver_BC26" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="udpserver" target="1.5" />
+      <module name="udpserver" target="6" />
+      <module name="udpserver (1)" target="6" />
+      <module name="udpserver (2)" target="1.5" />
       <module name="udpserver_BC26" target="1.5" />
     </bytecodeTargetLevel>
   </component>

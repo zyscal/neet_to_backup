@@ -15,7 +15,7 @@
 #include <avsystem/commons/avs_defs.h>
 #include <avsystem/commons/avs_list.h>
 #include <avsystem/commons/avs_memory.h>
-
+#include "XCBR_Pos_34828.h"
 /**
  * Pos_stVal: R, Single, Mandatory
  * type: int, range: 0..3, unit: N/A
@@ -170,9 +170,35 @@ static int list_resources(anjay_t *anjay,
     (void) iid;
 
     anjay_dm_emit_res(ctx, RID_POS_STVAL,
-                      ANJAY_DM_RES_R, ANJAY_DM_RES_PRESENT);
+                      ANJAY_DM_RES_RW, ANJAY_DM_RES_PRESENT);
     return 0;
 }
+
+int
+resource_write(anjay_t *anjay,const anjay_dm_object_def_t *const *obj_ptr, anjay_iid_t iid,
+    anjay_rid_t rid, anjay_riid_t riid, anjay_input_ctx_t *ctx) {
+        printf("-----------enter into xcbr write-----------\n");
+        printf("iid is : %d\n", iid);
+        printf("rid is : %d\n", rid);
+        printf("riid is : %d\n", riid);
+        xcbr_pos_object_t *obj = get_obj(obj_ptr);
+        xcbr_pos_instance_t *inst = find_instance(obj, iid);
+        int result;
+        switch (rid) {
+            case RID_POS_STVAL:{
+                int64_t input;
+                result = anjay_get_i32(ctx, &input);
+                printf("the input is : %d\n", input);
+                xcbr_pos_instance_t *inst = find_instance(obj, iid);
+                inst->pos_stval = input;
+            }
+            
+        }
+        return result;
+}
+
+
+
 
 static int resource_read(anjay_t *anjay,
                          const anjay_dm_object_def_t *const *obj_ptr,
@@ -206,8 +232,8 @@ int xcbr_pos_object_change_stval(int iid, anjay_dm_object_def_t **obj_ptr, int n
 {
     xcbr_pos_object_t *obj = get_obj(obj_ptr);
     xcbr_pos_instance_t *inst = find_instance(obj, iid);
-    inst->his_pos_stval = num;
-    return inst->his_pos_stval;
+    inst->pos_stval = num;
+    return inst->pos_stval;
 }
 
 
@@ -218,7 +244,7 @@ static const anjay_dm_object_def_t OBJ_DEF = {
         .instance_create = instance_create,
         .instance_remove = instance_remove,
         .instance_reset = instance_reset,
-
+        .resource_write = resource_write,
         .list_resources = list_resources,
         .resource_read = resource_read,
 
@@ -237,7 +263,6 @@ const anjay_dm_object_def_t **xcbr_pos_object_create(void) {
     }
     obj->def = &OBJ_DEF;
 
-    // TODO: object init
     xcbr_pos_instance_t *inst = add_instance(obj, 0);
     if(inst)
     {
@@ -249,9 +274,6 @@ const anjay_dm_object_def_t **xcbr_pos_object_create(void) {
         avs_free(obj);
         return NULL;
     }
-    
-
-
     return &obj->def;
 }
 
@@ -269,15 +291,18 @@ void xcbr_pos_object_release(const anjay_dm_object_def_t **def) {
 }
 
 
-void xcbr_pos_object_notify(anjay_t *anjay, const anjay_dm_object_def_t **def, uint8_t now_XCBR_Pos) {
+void xcbr_pos_object_notify(anjay_t *anjay, const anjay_dm_object_def_t **def) {
     if (!anjay || !def) {
         return;
     }
     xcbr_pos_object_t *obj = get_obj(def);
     AVS_LIST(xcbr_pos_instance_t) it;
     AVS_LIST_FOREACH(it, obj->instances) {
-        if (now_XCBR_Pos != it->pos_stval) {
+        pthread_mutex_lock(&xcbr_mutex);
+        if (it->his_pos_stval != it->pos_stval) {
             anjay_notify_changed(anjay, 34828, it->iid, RID_POS_STVAL);
+            it->his_pos_stval = it->pos_stval;
         }
+        pthread_mutex_unlock(&xcbr_mutex);
     }
 }

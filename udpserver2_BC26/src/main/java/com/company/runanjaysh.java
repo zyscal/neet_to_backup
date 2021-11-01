@@ -8,8 +8,7 @@ public class runanjaysh {
     public static void main(String[] args) throws IOException, InterruptedException {
             regAnjay reg = new regAnjay();
             killanjay kil = new killanjay();
-
-            for(int i = 0; i < 1000; i++)
+            for(int i = 0; i < 5400; i++)
             {
                 reg.run();
                 Thread.sleep(8000);

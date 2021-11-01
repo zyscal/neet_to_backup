@@ -31,6 +31,7 @@ static int output_buf_ret_bytes(anjay_output_ctx_t *ctx_,
 }
 
 static int output_buf_ret_string(anjay_output_ctx_t *ctx, const char *str) {
+    printf("enter into output_buf_ret_string\n");
     return output_buf_ret_bytes(ctx, str, strlen(str));
 }
 

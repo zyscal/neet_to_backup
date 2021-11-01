@@ -64,6 +64,7 @@ static int text_ret_bytes_begin(anjay_output_ctx_t *ctx_,
 }
 
 static int text_ret_string(anjay_output_ctx_t *ctx_, const char *value) {
+    printf("enter into text_ret_string\n");
     text_out_t *ctx = (text_out_t *) ctx_;
     if (ctx->bytes) {
         return -1;
@@ -271,6 +272,8 @@ static int text_get_some_bytes(anjay_input_ctx_t *ctx_,
 
 static int
 text_get_string(anjay_input_ctx_t *ctx, char *out_buf, size_t buf_size) {
+                printf("enter into text_get_string\n");
+
     assert(buf_size);
     text_in_t *in = (text_in_t *) ctx;
     if (in->bytes_mode) {

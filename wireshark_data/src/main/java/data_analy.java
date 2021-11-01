@@ -100,145 +100,145 @@ public class data_analy {
 //            nb_udp_reg_rtt.RTT_NB_CoAP_RTT();
 //        }while (false);
 
-        do{
-            String read1_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read1/app_bc26_20210221-20210222_read1_UL";
-            String sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read1_ACKSENDER.pcap";
-            String revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read1_ACKRECV.pcap";
-            NB_UDP_handle_UP_Down_NON nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read1_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read1_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read1/app_bc26_20210221-20210222_read1_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read1_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read1_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read1_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read5_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read5/app_bc26_20210221-20210222_read5_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read5_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read5_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read5_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read5_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read5/app_bc26_20210221-20210222_read5_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read5_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read5_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read5_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read3333_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read3333/app_bc26_20210221-20210222_read3333_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read3333_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read3333_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read3333_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read3333_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read3333/app_bc26_20210221-20210222_read3333_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read3333_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read3333_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read3333_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read34828_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read34828/app_bc26_20210221-20210222_read34828_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read34828_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read34828_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read34828_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String read34828_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read34828/app_bc26_20210221-20210222_read34828_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read34828_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read34828_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read34828_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String observe503_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe503/app_bc26_20210221-20210222_observe503_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe503_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe503_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe503_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String observe503_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe503/app_bc26_20210221-20210222_observe503_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe503_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe503_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe503_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String observe34828029272_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe34828029272/app_bc26_20210221-20210222_observe34828029272_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe34828029272_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe34828029272_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe34828029272_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String observe34828029272_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe34828029272/app_bc26_20210221-20210222_observe34828029272_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe34828029272_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe34828029272_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe34828029272_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String URI_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_URI/app_bc26_20210221-20210222_URI_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_URI_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_URI_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(URI_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String URI_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_URI/app_bc26_20210221-20210222_URI_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_URI_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_URI_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(URI_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String UPD_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_UPD/app_bc26_20210221-20210222_UPD_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_UPD_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_UPD_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(UPD_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String UPD_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_UPD/app_bc26_20210221-20210222_UPD_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_UPD_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_UPD_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(UPD_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String REG_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_REG/app_bc26_20210221-20210222_REG_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_REG_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_REG_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(REG_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String REG_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_REG/app_bc26_20210221-20210222_REG_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_REG_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_REG_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(REG_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String firmware_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_5700/app_bc26_20210221-20210222_5700_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5700_CONSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5700_CONRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(firmware_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String firmware_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_5700/app_bc26_20210221-20210222_5700_DL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5700_ACKSENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5700_ACKRECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(firmware_DL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String NON_503_1_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_NON/app_bc26_20210221-20210222_NON_503_1_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_NON_503_1_SENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_NON_503_1_RECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(NON_503_1_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String NON_503_2_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_NON/app_bc26_20210221-20210222_NON_503_2_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_NON_503_2_SENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_NON_503_2_RECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(NON_503_2_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-
-            String NON_34828029272_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_NON/app_bc26_20210221-20210222_34828029272_UL";
-            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_NON_34828029272_SENDER.pcap";
-            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_NON_34828029272_RECV.pcap";
-            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(NON_34828029272_UL, sender_file, revicer_file);
-            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
-        }while(false);
+//        do{
+//            String read1_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read1/app_bc26_20210221-20210222_read1_UL";
+//            String sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read1_ACKSENDER.pcap";
+//            String revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read1_ACKRECV.pcap";
+//            NB_UDP_handle_UP_Down_NON nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read1_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read1_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read1/app_bc26_20210221-20210222_read1_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read1_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read1_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read1_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read5_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read5/app_bc26_20210221-20210222_read5_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read5_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read5_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read5_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read5_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read5/app_bc26_20210221-20210222_read5_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read5_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read5_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read5_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read3333_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read3333/app_bc26_20210221-20210222_read3333_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read3333_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read3333_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read3333_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read3333_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read3333/app_bc26_20210221-20210222_read3333_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read3333_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read3333_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read3333_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read34828_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read34828/app_bc26_20210221-20210222_read34828_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read34828_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read34828_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read34828_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String read34828_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_read34828/app_bc26_20210221-20210222_read34828_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_read34828_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_read34828_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(read34828_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String observe503_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe503/app_bc26_20210221-20210222_observe503_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe503_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe503_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe503_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String observe503_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe503/app_bc26_20210221-20210222_observe503_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe503_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe503_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe503_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String observe34828029272_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe34828029272/app_bc26_20210221-20210222_observe34828029272_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe34828029272_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe34828029272_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe34828029272_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String observe34828029272_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_observe34828029272/app_bc26_20210221-20210222_observe34828029272_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_observe34828029272_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_observe34828029272_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(observe34828029272_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String URI_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_URI/app_bc26_20210221-20210222_URI_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_URI_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_URI_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(URI_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String URI_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_URI/app_bc26_20210221-20210222_URI_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_URI_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_URI_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(URI_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String UPD_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_UPD/app_bc26_20210221-20210222_UPD_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_UPD_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_UPD_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(UPD_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String UPD_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_UPD/app_bc26_20210221-20210222_UPD_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_UPD_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_UPD_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(UPD_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String REG_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_REG/app_bc26_20210221-20210222_REG_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_REG_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_REG_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(REG_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String REG_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_REG/app_bc26_20210221-20210222_REG_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_REG_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_REG_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(REG_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String firmware_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_5700/app_bc26_20210221-20210222_5700_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5700_CONSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5700_CONRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(firmware_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String firmware_DL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_5700/app_bc26_20210221-20210222_5700_DL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5700_ACKSENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5700_ACKRECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(firmware_DL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String NON_503_1_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_NON/app_bc26_20210221-20210222_NON_503_1_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_NON_503_1_SENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_NON_503_1_RECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(NON_503_1_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String NON_503_2_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_NON/app_bc26_20210221-20210222_NON_503_2_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_NON_503_2_SENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_NON_503_2_RECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(NON_503_2_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//
+//            String NON_34828029272_UL = "src/app_bc26_20210221-20210222/app_bc26_20210221-20210222_NON/app_bc26_20210221-20210222_34828029272_UL";
+//            sender_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_client_5683_NON_34828029272_SENDER.pcap";
+//            revicer_file = "/home/zyscal/Documents/need_to_backup/wiresahrk_caught/BC26_20210221-20210222/BC26_20210221-20210222_4app_server_5683_NON_34828029272_RECV.pcap";
+//            nb_udp_handle_up_down_non = new NB_UDP_handle_UP_Down_NON(NON_34828029272_UL, sender_file, revicer_file);
+//            nb_udp_handle_up_down_non.UP_DOWN_NON_delay();
+//        }while(false);
 
 
 
@@ -389,6 +389,20 @@ public class data_analy {
 //                    , firmware_speed_log,0, speed_list[i]);
 //            nb_udp_calculate_speed.speed_calculate();
 //        }
+
+        /**
+         * 基于NB-IoT TCP 注册事件RTT计算，从客户端角度分析
+         */
+        NB_CoAP_REG_TCP nb_coAP_reg_tcp = new NB_CoAP_REG_TCP();
+        String fileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211031TCP/20211031RegOverTcp/Client_REG.pcap";
+        String RegRTTOutName = "src/20211031RegOverTCP/ClientRegRTT.txt";
+        String RegRTTOutDateTime = "src/20211031RegOverTCP/ClientRegRTTDateTime.txt";
+        nb_coAP_reg_tcp.RegRTTFromClient(5700, 5701, fileName, RegRTTOutName, RegRTTOutDateTime);
+
+        fileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211031TCP/20211031RegOverTcp/Server_NB_REG_Created_RTT.pcap";
+        RegRTTOutName = "src/20211031RegOverTCP/ServerRegRTT.txt";
+        RegRTTOutDateTime = "src/20211031RegOverTCP/ServerRegRTTDateTime.txt";
+        nb_coAP_reg_tcp.RegRTTFromServer(0, 5800, fileName, RegRTTOutName, RegRTTOutDateTime);
 
     }
 

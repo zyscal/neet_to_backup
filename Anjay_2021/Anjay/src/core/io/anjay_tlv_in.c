@@ -143,6 +143,7 @@ static int tlv_read_whole_entry(anjay_input_ctx_t *ctx_,
 
 static int
 tlv_get_string(anjay_input_ctx_t *ctx, char *out_buf, size_t buf_size) {
+    printf("enter into tlv_get_string\n");
     assert(buf_size);
     size_t bytes_read = 0;
     int retval = tlv_read_to_end(ctx, &bytes_read, out_buf, buf_size - 1);

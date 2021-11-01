@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/udpserver.iml" filepath="$PROJECT_DIR$/udpserver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/udpserver_BC26.iml" filepath="$PROJECT_DIR$/udpserver_BC26.iml" />
     </modules>
   </component>
 </project>

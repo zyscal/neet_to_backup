@@ -45,8 +45,8 @@
 
 typedef struct time_instance_struct {
     anjay_iid_t iid;
-    char application_type[128];
-    char application_type_backup[128];
+    char application_type[300];
+    char application_type_backup[300];
     uint64_t last_notify_timestamp;
 } time_instance_t;
 
@@ -229,6 +229,7 @@ static int resource_write(anjay_t *anjay,
                           anjay_rid_t rid,
                           anjay_riid_t riid,
                           anjay_input_ctx_t *ctx) {
+    printf("enter into time object resource write\n");
     (void) anjay;
 
     time_object_t *obj = get_obj(obj_ptr);

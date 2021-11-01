@@ -31,11 +31,11 @@ public class testcom implements SerialPortEventListener {
         while (portList.hasMoreElements()){
             /**强制转换为通讯端口类型*/
             portId=(CommPortIdentifier)portList.nextElement();
+            System.out.println("find " + portId.getName());
             if(portId.getPortType() == CommPortIdentifier.PORT_SERIAL){
                 //USB串口1
                 if (portId.getName().equals(ttyUSB)) {
                     try {
-                        ////System.out.println("find : " + portId.getName());
                         serialPort = (SerialPort) portId.open("ReadComm", 2000);
                         /**设置串口监听器*/
                         serialPort.addEventListener(this);
@@ -43,12 +43,11 @@ public class testcom implements SerialPortEventListener {
                         serialPort.notifyOnDataAvailable(true);
                     }
                     catch (PortInUseException e) {
-                        ////System.out.println(e);
+                        System.out.println(e);
                     }
                     catch (TooManyListenersException e) {
-                        ////System.out.println(e);
+                        System.out.println(e);
                     }
-
                 }
                 //if end
             } //if end
@@ -56,9 +55,7 @@ public class testcom implements SerialPortEventListener {
     } //actionPerformed() end
     @Override
     public void serialEvent(SerialPortEvent event) {
-        ////System.out.println("enter into serialEvent");
         /**设置串口通讯参数：波特率、数据位、停止位、奇偶校验*/
-//        ////System.out.println("enter into serialEvent");
         try {
             serialPort.setSerialPortParams(9600,
                     SerialPort.DATABITS_8,
@@ -96,7 +93,7 @@ public class testcom implements SerialPortEventListener {
                             for (int i = 0; i < recv.length; i++) {//
                                 int chang = recv[i] & 0xFF;
                                 String hex_recv = Integer.toHexString(chang);
-                                System.out.print(hex_recv + " ");
+                                System.out.print(hex_recv + "\t");
                             }
                             System.out.println();
                             for (int i = 0; i < recv.length; i++) {
@@ -106,7 +103,7 @@ public class testcom implements SerialPortEventListener {
                                 } else if (ascll == 0x0d) {
                                     System.out.print("0d ");
                                 } else {
-                                    System.out.print(ascll + " ");
+                                    System.out.print(ascll + "\t");
                                 }
                             }
                             System.out.println();
@@ -121,8 +118,6 @@ public class testcom implements SerialPortEventListener {
                                     Byte tem = 0x0d;
                                     recvBytes.add(tem);
                                 }
-
-
                                 if (temrecv == 0x0d && i + 1 < recv.length && recv[i + 1] == 0x0a) {
                                     i++;
                                     handle_every_bytes(recvBytes);
@@ -137,7 +132,9 @@ public class testcom implements SerialPortEventListener {
                             inputStream.close();
                             break;
                         }
+                    System.out.println("out of while");
             }
+
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -152,14 +149,21 @@ public class testcom implements SerialPortEventListener {
         System.out.print("handle_every_bytes : ");
         for(int i = 0; i < recv.size(); i++)
         {
-            System.out.print(recv.get(i) + " ");
+            if(recv.get(i) == 0x0a) {
+                System.out.print("0a ");
+                continue;
+            } else if(recv.get(i) == 0x0d) {
+                System.out.print("0d ");
+                continue;
+            }
+            System.out.print((char) (int)recv.get(i) + " ");
         }
         System.out.println();
 
         byte[][] ignore ={{0x53, 0x45, 0x4e, 0x44, 0x20, 0x4f, 0x4b}/*send ok*/, {0x4f, 0x4b}/*OK*/, {0x41, 0x54}/*AT*/, {0x2b}/* + */};
         if(recv.size() == 0)
         {
-            ////System.out.println("return from size == 0");
+            System.out.println("return from size == 0");
             return;
         }
         if(canIignore(ignore, recv))
@@ -170,7 +174,7 @@ public class testcom implements SerialPortEventListener {
         }
         else
         {
-            ////System.out.println("ready to send back to anjay");
+            System.out.println("ready to send back to anjay");
             String hex_to_byte = "";
             for(int i = 0; i < recv.size(); i++)
             {
@@ -180,23 +184,33 @@ public class testcom implements SerialPortEventListener {
             System.out.println("hex_to_byte : " + hex_to_byte);
             byte[] send = this.hex2byte(hex_to_byte);
 
-            String anjayaddr = Main.anjayaddr.split("/")[1];
-            DatagramPacket pack_to_anjay;
+
             try {
-                if(socket_connectID == Anjaythread.NB_Socket_connectID_LwM2Mserver)
+                if(socket_connectID == Main.NB_Socket_connectID_LwM2Mserver)
                 {
+                    String anjayaddr = Main.anjayaddr.split("/")[1];
+                    DatagramPacket pack_to_anjay;
+                    System.out.println("enter into socket_connectID == Main.NB_Socket_connectID_LwM2Mserver");
                     pack_to_anjay = new DatagramPacket(send,
                             send.length, InetAddress.getByName(anjayaddr),Main.anjayport);
                     Main.socket_anjay.send(pack_to_anjay);
                 }
-                else if(socket_connectID == Anjaythread.NB_Socket_connectID_CoAPfileserver)
+                else if(socket_connectID == Main.NB_Socket_connectID_CoAPfileserver)
                 {
+                    String anjayaddr = Main.anjayaddr.split("/")[1];
+                    DatagramPacket pack_to_anjay;
+                    System.out.println("enter into socket_connectID == Main.NB_Socket_connectID_CoAPfileserver");
                     pack_to_anjay = new DatagramPacket(send,
                             send.length, InetAddress.getByName(anjayaddr),Main.anjay_coapfileclient_port);
                     Main.socket_coap_file.send(pack_to_anjay);
+                } else if (socket_connectID == Main.NB_TCPSocket_connectID) {
+                    System.out.println("enter into socket_connectID == Main.NB_TCPSocket_connectID");
+                    DataOutputStream out = new DataOutputStream(Main.TCPSocket.getOutputStream());
+                    out.write(send);
+                } else {
+                    System.out.println("nowhere to send");
+                    System.out.println("socket_connectID is " + socket_connectID);
                 }
-
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -204,10 +218,8 @@ public class testcom implements SerialPortEventListener {
     }
     boolean canIignore(byte[][] ignore, ArrayList<Byte> recv)
     {
-//        System.out.println("enter into canIignore");
         for(int i = 0; i < ignore.length; i++)
         {
-            ////System.out.println("round " + i);
             boolean check = true;
             for(int j = 0; j < ignore[i].length; j++)
             {
@@ -219,21 +231,20 @@ public class testcom implements SerialPortEventListener {
             }
             if(check)
             {
-                if(recv.get(0) == 0x2b)
+                if(recv.get(0) == 0x2b) // + 号
                 {
                     int the_next_msgID = getConnectID(recv);
                     System.out.println("#######connectID is : " + the_next_msgID);
                     socket_connectID = the_next_msgID;
 
                 }
-
-
                 return true;
             }
         }
         return false;
     }
-    public int getConnectID(ArrayList<Byte> recv)
+
+    public int getConnectID(ArrayList<Byte> recv) // 例如 +QIURC: "recv",2,7  找到逗号后面的第一个数为connectID
     {
         for(int i = 0; i < recv.size(); i++)
         {
@@ -259,95 +270,18 @@ public class testcom implements SerialPortEventListener {
     protected void writes_by_String(String things)
     {
         things += "\r\n";
-        ////System.out.println("things.length:" +things.length());
-        ////System.out.println("AT write : " + things);
         byte[] send = new byte[things.length()];
         send = things.getBytes();
         this.writes(send);
     }
 
     protected void writes(byte[] b){
-        ////System.out.println("size of b : " + b.length);
         try {
             outputStream = serialPort.getOutputStream();
             outputStream.write(b);
             outputStream.flush();
-            ////System.out.println("after write");
         } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-    public void sendComm(String data) {
-        byte[] writerBuffer = null;
-        try {
-            writerBuffer = hexToByteArray(data);
-        } catch (NumberFormatException e) {
-            ////System.out.println(e);
-        }
-        try {
-            outputStream = serialPort.getOutputStream();
-            outputStream.write(writerBuffer);
-            outputStream.flush();
-        } catch (NullPointerException e) {
-            ////System.out.println(e);
-        } catch (IOException e) {
-            ////System.out.println(e);
+            System.out.println(e);
         }
     }
-    public static byte[] hexToByteArray(String inHex) {
-        int hexlen = inHex.length();
-        byte[] result;
-        if (hexlen % 2 == 1) {
-            // 奇数
-            hexlen++;
-            result = new byte[(hexlen / 2)];
-            inHex = "0" + inHex;
-        } else {
-            // 偶数
-            result = new byte[(hexlen / 2)];
-        }
-        int j = 0;
-        for (int i = 0; i < hexlen; i += 2) {
-            result[j] = hexToByte(inHex.substring(i, i + 2));
-            j++;
-        }
-        return result;
-    }
-    public static byte hexToByte(String inHex) {
-        return (byte) Integer.parseInt(inHex, 16);
-    }
-    public String getAvailableSerialPortsName() {
-        String ttyUSB = null;
-        @SuppressWarnings("rawtypes")
-        Enumeration thePorts = CommPortIdentifier.getPortIdentifiers();
-        while (thePorts.hasMoreElements()) {
-            CommPortIdentifier com = (CommPortIdentifier) thePorts.nextElement();
-            switch (com.getPortType()) {
-                case CommPortIdentifier.PORT_SERIAL:
-                    CommPort thePort = null;
-                    try {//过滤COM1-3
-//                        thePort = com.open("CommUtil", 2000);
-//                        if (!Pattern.compile("ttyUSB[0-3]\\b").matcher(com.getName()).matches()) {
-//                            ttyUSB = com.getName();
-//                        }
-                        thePort = com.open("CommUtil", 2000);
-                        if(com.getName().charAt(8) == 'U')
-                        {
-                            ttyUSB = com.getName();
-                        }
-                    } catch (PortInUseException e) {
-                        e.printStackTrace();
-                    } catch (Exception e) {
-                        ////System.out.println("Failed to open port " + com.getName());
-                    } finally {
-                        if (thePort != null) {
-                            thePort.close();
-                        }
-                    }
-            }
-        }
-        return ttyUSB;
-    }
-
 }

@@ -13,16 +13,18 @@ public class CoAP_mes {
     public byte[] Token;
     public String mid_string;
 
+    public CoAP_mes() {
 
+    }
 
-public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] Token)
-{
-    this.arrive_date = arrive_date;
-    this.des_port = des_port;
-    this.src_port = src_port;
-    this.mid = mid;
-    this.Token = Token;
-}
+    public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] Token)
+    {
+        this.arrive_date = arrive_date;
+        this.des_port = des_port;
+        this.src_port = src_port;
+        this.mid = mid;
+        this.Token = Token;
+    }
     public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] Token, String mid_string)
     {
         this.arrive_date = arrive_date;
@@ -32,6 +34,8 @@ public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] To
         this.Token = Token;
         this.mid_string = mid_string;
     }
+
+
     public long getArrive_date() {
         return arrive_date;
     }
@@ -64,7 +68,6 @@ public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] To
         this.src_port = src_port;
     }
 
-
     public int getMid() {
         return mid;
     }
@@ -80,6 +83,8 @@ public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] To
     public void setToken(byte[] token) {
         Token = token;
     }
+
+
     public static int Get_diff_ms(long ACK, long CON)
     {
         Date CON_Date = new Date(CON/1000 );
@@ -92,6 +97,7 @@ public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] To
         byte[] ans = new byte[]{CoAPheader[2], CoAPheader[3]};
         return  ans;
     }
+
     public static String make_KEY(byte[] MID, byte[] Token)
     {
         String KEY = "";
@@ -132,5 +138,26 @@ public CoAP_mes(long arrive_date, int des_port, int src_port, int mid, byte[] To
             Token[j] = CoAPheader[i];
         }
         return Token;
+    }
+
+    public static byte[] GetTokenOverTCP(byte[] CoAPheader) {
+        int LengthOfToken = 0x0f & CoAPheader[0];
+        byte[] token = new byte[LengthOfToken];
+        for(int i = 3; i < 3 + LengthOfToken; i++) {
+            token[i - 3] = CoAPheader[i];
+        }
+        return token;
+    }
+
+    public static boolean tokenMatch(byte[] token1, byte[] token2) {
+        if(token1.length != token2.length) {
+            return false;
+        }
+        for(int i = 0; i < token1.length; i++) {
+            if (token1[i] != token2[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }

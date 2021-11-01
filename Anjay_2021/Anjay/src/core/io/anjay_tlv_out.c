@@ -288,6 +288,8 @@ static int tlv_ret_bytes(anjay_output_ctx_t *ctx_,
 }
 
 static int tlv_ret_string(anjay_output_ctx_t *ctx, const char *value) {
+                    printf("enter into tlv_ret_string\n");
+
     return anjay_ret_bytes(ctx, value, strlen(value));
 }
 

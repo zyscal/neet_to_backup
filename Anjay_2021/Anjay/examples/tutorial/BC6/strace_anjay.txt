@@ -1,0 +1,333 @@
+execve("./anjay-bc6", ["./anjay-bc6", "device1-1", "coap://192.168.3.24:6000"], 0x7fffe9090138 /* 70 vars */) = 0
+brk(NULL)                               = 0x55e3ab188000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffcf3692a10) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/x86_64/x86_64", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/x86_64", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/x86_64", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/x86_64/x86_64", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/x86_64", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/x86_64", 0x7ffcf3691bc0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=136817, ...}) = 0
+mmap(NULL, 136817, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7eff87a81000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\201\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\356\265\260U\251\3278\333d\344P\6_\210\230\v"..., 68, 824) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=157224, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7eff87a7f000
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\356\265\260U\251\3278\333d\344P\6_\210\230\v"..., 68, 824) = 68
+mmap(NULL, 140408, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7eff87a5c000
+mmap(0x7eff87a63000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7eff87a63000
+mmap(0x7eff87a74000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7eff87a74000
+mmap(0x7eff87a79000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000) = 0x7eff87a79000
+mmap(0x7eff87a7b000, 13432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7eff87a7b000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libmbedtls.so.13", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340}\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=217960, ...}) = 0
+mmap(NULL, 199152, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7eff87a2b000
+mprotect(0x7eff87a32000, 159744, PROT_NONE) = 0
+mmap(0x7eff87a32000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7eff87a32000
+mmap(0x7eff87a4d000, 45056, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7eff87a4d000
+mmap(0x7eff87a59000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2d000) = 0x7eff87a59000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libmbedx509.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200g\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=148104, ...}) = 0
+mmap(NULL, 132208, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7eff87a0a000
+mmap(0x7eff87a10000, 36864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7eff87a10000
+mmap(0x7eff87a19000, 65536, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7eff87a19000
+mmap(0x7eff87a29000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e000) = 0x7eff87a29000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libmbedcrypto.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300-\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=494528, ...}) = 0
+mmap(NULL, 450464, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7eff8799c000
+mmap(0x7eff879ad000, 245760, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7eff879ad000
+mmap(0x7eff879e9000, 106496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4d000) = 0x7eff879e9000
+mmap(0x7eff87a03000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x66000) = 0x7eff87a03000
+mmap(0x7eff87a07000, 12192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7eff87a07000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\363\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=1369352, ...}) = 0
+mmap(NULL, 1368336, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7eff8784d000
+mmap(0x7eff8785c000, 684032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7eff8785c000
+mmap(0x7eff87903000, 618496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb6000) = 0x7eff87903000
+mmap(0x7eff8799a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14c000) = 0x7eff8799a000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\316x.\316\10\320\210\347~\352\334\10o\204\324\210"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\316x.\316\10\320\210\347~\352\334\10o\204\324\210"..., 68, 880) = 68
+mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7eff8765b000
+mprotect(0x7eff87680000, 1847296, PROT_NONE) = 0
+mmap(0x7eff87680000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7eff87680000
+mmap(0x7eff877f8000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7eff877f8000
+mmap(0x7eff87843000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7eff87843000
+mmap(0x7eff87849000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7eff87849000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7eff87659000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7eff87657000
+arch_prctl(ARCH_SET_FS, 0x7eff8765a680) = 0
+mprotect(0x7eff87843000, 12288, PROT_READ) = 0
+mprotect(0x7eff8799a000, 4096, PROT_READ) = 0
+mprotect(0x7eff87a03000, 12288, PROT_READ) = 0
+mprotect(0x7eff87a29000, 4096, PROT_READ) = 0
+mprotect(0x7eff87a59000, 8192, PROT_READ) = 0
+mprotect(0x7eff87a79000, 4096, PROT_READ) = 0
+mprotect(0x55e3aae87000, 8192, PROT_READ) = 0
+mprotect(0x7eff87ad0000, 4096, PROT_READ) = 0
+munmap(0x7eff87a81000, 136817)          = 0
+set_tid_address(0x7eff8765a950)         = 1075775
+set_robust_list(0x7eff8765a960, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7eff87a63bf0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7eff87a71420}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7eff87a63c90, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7eff87a71420}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x7), ...}) = 0
+brk(NULL)                               = 0x55e3ab188000
+brk(0x55e3ab1a9000)                     = 0x55e3ab1a9000
+write(1, "device1-1\n", 10)             = 10
+write(1, "coap://192.168.3.24:6000\n", 25) = 25
+write(2, "INFO [anjay] [/home/zyscal/Docum"..., 122) = 122
+getrandom("\x67\x39\xc7\x02\x41\xa4\xfb\xcb\xa7\x30\xef\x30\x89\x4a\x24\xc9\xb1\xc9\x7a\x52\x63\x18\xa6\x14\xff\x70\x1b\xf1\x94\x09\x30\x1d"..., 128, 0) = 128
+write(2, "INFO [anjay_dm] [/home/zyscal/Do"..., 137) = 137
+write(2, "INFO [security] [/home/zyscal/Do"..., 178) = 178
+write(2, "WARNING [anjay] [/home/zyscal/Do"..., 117) = 117
+write(2, "WARNING [anjay] [/home/zyscal/Do"..., 117) = 117
+write(2, "INFO [anjay_dm] [/home/zyscal/Do"..., 137) = 137
+write(2, "INFO [server] [/home/zyscal/Docu"..., 141) = 141
+access("/tmp/fw-updated-marker", F_OK)  = -1 ENOENT (No such file or directory)
+write(2, "INFO [anjay_dm] [/home/zyscal/Do"..., 137) = 137
+write(2, "INFO [anjay_dm] [/home/zyscal/Do"..., 140) = 140
+write(2, "INFO [anjay_dm] [/home/zyscal/Do"..., 141) = 141
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7eff86e56000
+mprotect(0x7eff86e57000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7eff87655fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[1075776], tls=0x7eff87656700, child_tidptr=0x7eff876569d0) = 1075776
+write(1, "thread success!\n", 16)       = 16
+write(2, "INFO [anjay] [/home/zyscal/Docum"..., 124) = 124
+write(2, "WARNING [anjay] [/home/zyscal/Do"..., 117) = 117
+write(2, "WARNING [anjay] [/home/zyscal/Do"..., 117) = 117
+socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP) = 3
+fcntl(3, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(6000), sin_addr=inet_addr("192.168.3.24")}, 16) = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, 9999) = 1 ([{fd=3, revents=POLLOUT}])
+getsockname(3, {sa_family=AF_INET, sin_port=htons(53230), sin_addr=inet_addr("192.168.3.24")}, [128->16]) = 0
+write(2, "INFO [anjay] [/home/zyscal/Docum"..., 124) = 124
+write(2, "INFO [anjay] [/home/zyscal/Docum"..., 155) = 155
+write(2, "INFO [anjay] [/home/zyscal/Docum"..., 123) = 123
+getsockname(3, {sa_family=AF_INET, sin_port=htons(53230), sin_addr=inet_addr("192.168.3.24")}, [128->16]) = 0
+getsockopt(3, SOL_IP, IP_MTU, [65535], [4]) = 0
+getsockname(3, {sa_family=AF_INET, sin_port=htons(53230), sin_addr=inet_addr("192.168.3.24")}, [128->16]) = 0
+poll([{fd=3, events=POLLOUT}], 1, 29999) = 1 ([{fd=3, revents=POLLOUT}])
+sendto(3, "H\2\7:\226\10[\226\233\347\312\246\262rd\21(9lwm2m=1.0\fep=d"..., 82, MSG_NOSIGNAL, NULL, 0) = 82
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 1 ([{fd=3, revents=POLLIN}])
+poll([{fd=3, events=POLLIN}], 1, 0)     = 1 ([{fd=3, revents=POLLIN}])
+recvmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="hA\7:\226\10[\226\233\347\312\246\202rd\0010", iov_len=4000}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 17
+write(2, "INFO [anjay] [/home/zyscal/Docum"..., 151) = 151
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 993)   = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000)  = 0 (Timeout)
+poll([{fd=3, events=POLLIN}], 1, 1000

@@ -159,6 +159,8 @@ static int senml_ret_bytes(anjay_output_ctx_t *ctx_,
 }
 
 static int senml_ret_string(anjay_output_ctx_t *ctx_, const char *value) {
+            printf("enter into senml_ret_string\n");
+
     senml_out_t *ctx = (senml_out_t *) ctx_;
     int retval;
     (void) ((retval = element_begin(ctx))

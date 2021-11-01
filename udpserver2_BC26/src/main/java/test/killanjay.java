@@ -5,7 +5,7 @@ import java.io.IOException;
 public class killanjay extends Thread {
     @Override
     public void run() {
-        String path = "pkill demo";
+        String path = "pkill anjay-bc6";
         Runtime runtime = Runtime.getRuntime();
         Process pro = null;
         try {

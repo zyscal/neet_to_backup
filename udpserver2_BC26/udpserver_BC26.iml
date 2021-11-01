@@ -9,35 +9,19 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/RXTXcomm.jar!/" />
         </CLASSES>
-        <JAVADOC />
-        <NATIVE>
-          <root url="file://$MODULE_DIR$/lib" />
-        </NATIVE>
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES />
         <JAVADOC>
           <root url="jar://$MODULE_DIR$/lib/pkts-core-3.0.7-javadoc.jar!/" />
         </JAVADOC>
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: RXTXcomm:RXTXcomm:1.0.0">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/RXTXcomm.jar!/" />
-        </CLASSES>
-        <JAVADOC />
+        <NATIVE>
+          <root url="file://$MODULE_DIR$/lib" />
+        </NATIVE>
         <SOURCES />
       </library>
     </orderEntry>

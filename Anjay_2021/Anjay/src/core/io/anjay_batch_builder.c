@@ -340,6 +340,7 @@ static int bytes_begin(anjay_output_ctx_t *ctx_,
 }
 
 static int ret_string(anjay_output_ctx_t *ctx_, const char *str) {
+    printf("enter into ret_string\n");
     builder_out_ctx_t *ctx = (builder_out_ctx_t *) ctx_;
     int result = -1;
     if (_anjay_uri_path_has(&ctx->path, ANJAY_ID_RID)) {

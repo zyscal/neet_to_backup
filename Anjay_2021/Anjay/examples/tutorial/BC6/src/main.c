@@ -3,7 +3,7 @@
 #include <anjay/security.h>
 #include <anjay/server.h>
 #include <avsystem/commons/avs_log.h>
-
+#include<pthread.h>
 #include <poll.h>
 #include <stdio.h>
 #include <pthread.h>
@@ -16,7 +16,7 @@
 #include "time_object.h"
 #include "firmware_update.h"
 #include "XCBR_Pos_34828.h"
-
+extern pthread_mutex_t xcbr_mutex;
 char *IPaddr = NULL;
 int main_loop(anjay_t *anjay, const anjay_dm_object_def_t **time_object
                 , const anjay_dm_object_def_t **xcbr_pos_object) {
@@ -60,8 +60,8 @@ int main_loop(anjay_t *anjay, const anjay_dm_object_def_t **time_object
 
         // Notify the library about a Resource value change
         // time_object_notify(anjay, time_object);
-        xcbr_pos_object_notify(anjay, xcbr_pos_object);
-                    // anjay_schedule_registration_update(anjay, 1);
+        xcbr_pos_object_notify(anjay, xcbr_pos_object); 
+        // anjay_schedule_registration_update(anjay, 1);
 
         // Finally run the scheduler
         anjay_sched_run(anjay);
@@ -160,9 +160,10 @@ void CMD(void* arg)
             {
                 i = 0;
             }
-                        anjay_schedule_registration_update(anjay, 1);
+            pthread_mutex_lock(&xcbr_mutex);
             int result = xcbr_pos_object_change_stval(0, xcbr_pos_object, i);
-                        anjay_schedule_registration_update(anjay, 1);
+            pthread_mutex_unlock(&xcbr_mutex);
+
             printf("\n\nxcbr_pos_stval now is ： %d\n", result);
         }
         else if(c == '\n')
@@ -171,10 +172,6 @@ void CMD(void* arg)
         }
         else if(c == 'u')
         {
-            anjay_schedule_registration_update(anjay, 1);
-anjay_schedule_registration_update(anjay, 1);
-anjay_schedule_registration_update(anjay, 1);
-anjay_schedule_registration_update(anjay, 1);
             anjay_schedule_registration_update(anjay, 1);
         }
     }
@@ -272,6 +269,8 @@ int main(int argc, char *argv[]) {
             result = -1;
         }
     }
+    // 初始化xcbr消息锁
+    pthread_mutex_init(&xcbr_mutex,NULL);
 
     pthread_t tids[0];
     int i = pthread_create(&tids[0], NULL, say_hello, &xcbr_pos_object);

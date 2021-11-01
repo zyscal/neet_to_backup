@@ -167,6 +167,7 @@ static int opaque_in_next_entry(anjay_input_ctx_t *ctx) {
 }
 
 static int bad_request() {
+        printf("enter into bad_request\n");
     return ANJAY_ERR_BAD_REQUEST;
 }
 

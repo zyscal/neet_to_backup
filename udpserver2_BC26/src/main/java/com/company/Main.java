@@ -1,46 +1,68 @@
 package com.company;
 
+import javax.naming.ldap.SortKey;
 import java.net.*;
 
 public class Main {
     public static int port_LwM2M_server = 5683;
     public static int port_CoAP_file_server = 5700;
+    // 通讯串口
+    public static testcom NBiot_with_BC35;
+    public static String com = "/dev/ttyUSB1";
+    // wifi UDP
+    public static DatagramSocket socket_leshan;
+
+    // NB-IoT UDP
+    public static DatagramSocket socket_anjay;//connectID = 0
+    public static int NB_Socket_connectID_LwM2Mserver = 0;
+
+    // NB-IoT UDP 文件
+    public static DatagramSocket socket_coap_file;//connectID = 2
+    public static int NB_Socket_connectID_CoAPfileserver = 2;
+
+    // NB-IoT TCP
+    public static ServerSocket socket_tcp_analyzer; // connectID = 1
+    public static int NB_TCPSocket_connectID = 1;
+    public static Socket TCPSocket;
+    // NB-IoT TCP 文件
+    public static ServerSocket socket_tcp_fileserver; // connectID = 3
 
     public static boolean isanjayend = true;
-    public static DatagramSocket socket_leshan;
-    public static DatagramSocket socket_anjay;//connectID = 0
-    public static DatagramSocket socket_coap_file;//connectID = 1
     public static InetAddress server_addr;
     public static int anjayport = -1;//if this port == 0,means there no anjay client connected,we should not to recv the leshan requests
     public static int anjay_coapfileclient_port = -1;//the port used to receive the file from coap server
     public static String anjayaddr = "0.0.0.0";
-
-    public static int model = 1;
+    public static int model = 2;
     /**
      * open USB
      * check UDP
      */
 
-
-
     public static void main(String[] args) throws SocketException, UnknownHostException, InterruptedException {
+        server_addr = InetAddress.getByName("39.107.84.110");
+        // 打开串口
+        NBiot_with_BC35 = new testcom();
+        NBiot_with_BC35.actionPerformed(com);
+//        socket_leshan = new DatagramSocket(4417);
+//        Leshanthread b = new Leshanthread( model );
+//        b.start();
 
-        socket_leshan = new DatagramSocket(4417);
+//        // 基于UDP
         socket_anjay = new DatagramSocket(port_LwM2M_server);
-        socket_coap_file = new DatagramSocket(port_CoAP_file_server);
-        server_addr = InetAddress.getByName("59.110.213.240");
-//        server_addr = InetAddress.getByName("192.168.1.54");
-
-        Leshanthread b = new Leshanthread(model);
-        Anjaythread thread_handle_LwM2M_client = new Anjaythread(model,socket_anjay );
-        Anjaythread thread_handle_CoAP_file_client = new Anjaythread(model, socket_coap_file);
+        Anjaythread thread_handle_LwM2M_client = new Anjaythread(model, socket_anjay);
         thread_handle_LwM2M_client.start();
         Thread.sleep(1000);
-        thread_handle_CoAP_file_client.start();
+//
+//        // 基于UPD文件传输
+//        socket_coap_file = new DatagramSocket(port_CoAP_file_server);
+//        Anjaythread thread_handle_CoAP_file_client = new Anjaythread(model, socket_coap_file);
+//        thread_handle_CoAP_file_client.start();
+
+        // 基于TCP
+        OrganizerOverTCP organizerOverTCP = new OrganizerOverTCP(NB_TCPSocket_connectID);
+        organizerOverTCP.start();
         System.out.println("a.start finish");
 
-
-        b.start();
     }
 //    public static void main(String[] args) {
 //        System.out.println("test udp server");
