@@ -397,13 +397,22 @@ public class data_analy {
         String fileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211031TCP/20211031RegOverTcp/Client_REG.pcap";
         String RegRTTOutName = "src/20211031RegOverTCP/ClientRegRTT.txt";
         String RegRTTOutDateTime = "src/20211031RegOverTCP/ClientRegRTTDateTime.txt";
-        nb_coAP_reg_tcp.RegRTTFromClient(5700, 5701, fileName, RegRTTOutName, RegRTTOutDateTime);
+        String log_file = "src/20211031RegOverTCP/log.txt";
+        nb_coAP_reg_tcp.RegRTTFromClient(5700, 5701, fileName, RegRTTOutName, RegRTTOutDateTime, log_file);
 
         fileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211031TCP/20211031RegOverTcp/Server_NB_REG_Created_RTT.pcap";
         RegRTTOutName = "src/20211031RegOverTCP/ServerRegRTT.txt";
         RegRTTOutDateTime = "src/20211031RegOverTCP/ServerRegRTTDateTime.txt";
         nb_coAP_reg_tcp.RegRTTFromServer(0, 5800, fileName, RegRTTOutName, RegRTTOutDateTime);
 
+        String out_RTT = "src/20211101RegOverUDP/ClinetRTT.txt";
+        String out_RTT_lost = "src/20211101RegOverUDP/ClientRTT_lost.txt";
+        String out_datetime = "src/20211101RegOverUDP/ClientRTT_datetime.txt";
+        String Pcap_open_stream = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211101UDP/Client_REG_RTT.pcap";
+        String out_log = "src/20211101RegOverUDP/out_log.txt";
+        String out_retransmission_datetime_file = "src/20211101RegOverUDP/retransmission_file.txt";
+        NB_CoAP_RTT nb_coAP_rtt = new NB_CoAP_RTT(out_RTT, out_RTT_lost, out_datetime, Pcap_open_stream, out_log, out_retransmission_datetime_file);
+        nb_coAP_rtt.RTT_NB_CoAP_RTT();
     }
 
 }

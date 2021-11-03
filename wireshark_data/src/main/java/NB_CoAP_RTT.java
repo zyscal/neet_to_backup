@@ -16,6 +16,7 @@ public class NB_CoAP_RTT {
     private BufferedWriter out_RTT_lost;
     private BufferedWriter out_datetime;
     private BufferedWriter out_RTT;
+    private BufferedWriter out_retransmission_datetime;
     private CAL_RTT_PARA cal_rtt_para;
     private String Pcap_open_stream;
     private String Pcap_log;
@@ -41,7 +42,8 @@ public class NB_CoAP_RTT {
      */
 
 
-    public NB_CoAP_RTT(String out_RTT, String out_RTT_lost, String out_datetime, String Pcap_open_stream, String Pcap_log)
+
+    private NB_CoAP_RTT(String out_RTT, String out_RTT_lost, String out_datetime, String Pcap_open_stream, String Pcap_log)
     {
         try
         {
@@ -58,6 +60,14 @@ public class NB_CoAP_RTT {
         cal_rtt_para = new CAL_RTT_PARA();
     }
 
+    public NB_CoAP_RTT(String out_RTT, String out_RTT_lost, String out_datetime, String Pcap_open_stream, String Pcap_log, String Retransmission_datetime) {
+        this(out_RTT, out_RTT_lost, out_datetime, Pcap_open_stream, Pcap_log);
+        try {
+            this.out_retransmission_datetime = new BufferedWriter(new FileWriter(Retransmission_datetime));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 
     public void RTT_NB_CoAP_RTT() {
         try
@@ -98,6 +108,7 @@ public class NB_CoAP_RTT {
                                 Integer value = wait_to_match.get(KEY);
                                 wait_to_match.put(KEY, value + 1);
                                 history_max.put(KEY, value + 1);
+                                out_retransmission_datetime.write(formatter.format(new Date(con_mes.getArrive_date() / 1000)) + "\n");
                             }
                             else {
                                 wait_to_match.put(KEY, 1);
@@ -218,6 +229,7 @@ public class NB_CoAP_RTT {
             out_datetime.close();
             out_RTT_lost.close();
             out_RTT.close();
+            out_retransmission_datetime.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

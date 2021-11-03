@@ -4,11 +4,11 @@ import javax.naming.ldap.SortKey;
 import java.net.*;
 
 public class Main {
-    public static int port_LwM2M_server = 5683;
+    public static int port_LwM2M_server = 5701;
     public static int port_CoAP_file_server = 5700;
     // 通讯串口
     public static testcom NBiot_with_BC35;
-    public static String com = "/dev/ttyUSB1";
+    public static String com = "/dev/ttyUSB0";
     // wifi UDP
     public static DatagramSocket socket_leshan;
 
@@ -59,9 +59,9 @@ public class Main {
 //        thread_handle_CoAP_file_client.start();
 
         // 基于TCP
-        OrganizerOverTCP organizerOverTCP = new OrganizerOverTCP(NB_TCPSocket_connectID);
-        organizerOverTCP.start();
-        System.out.println("a.start finish");
+//        OrganizerOverTCP organizerOverTCP = new OrganizerOverTCP(NB_TCPSocket_connectID);
+//        organizerOverTCP.start();
+//        System.out.println("a.start finish");
 
     }
 //    public static void main(String[] args) {
