@@ -48,10 +48,10 @@ public class Main {
 //        b.start();
 
 //        // 基于UDP
-        socket_anjay = new DatagramSocket(port_LwM2M_server);
-        Anjaythread thread_handle_LwM2M_client = new Anjaythread(model, socket_anjay);
-        thread_handle_LwM2M_client.start();
-        Thread.sleep(1000);
+//        socket_anjay = new DatagramSocket(port_LwM2M_server);
+//        Anjaythread thread_handle_LwM2M_client = new Anjaythread(model, socket_anjay);
+//        thread_handle_LwM2M_client.start();
+//        Thread.sleep(1000);
 //
 //        // 基于UPD文件传输
 //        socket_coap_file = new DatagramSocket(port_CoAP_file_server);
@@ -59,9 +59,9 @@ public class Main {
 //        thread_handle_CoAP_file_client.start();
 
         // 基于TCP
-//        OrganizerOverTCP organizerOverTCP = new OrganizerOverTCP(NB_TCPSocket_connectID);
-//        organizerOverTCP.start();
-//        System.out.println("a.start finish");
+        OrganizerOverTCP organizerOverTCP = new OrganizerOverTCP(NB_TCPSocket_connectID);
+        organizerOverTCP.start();
+        System.out.println("a.start finish");
 
     }
 //    public static void main(String[] args) {

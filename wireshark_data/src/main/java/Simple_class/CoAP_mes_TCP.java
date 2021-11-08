@@ -1,5 +1,10 @@
 package Simple_class;
 
+import io.pkts.packet.IPv4Packet;
+import io.pkts.packet.Packet;
+import io.pkts.packet.TCPPacket;
+import io.pkts.protocol.Protocol;
+
 public class CoAP_mes_TCP extends CoAP_mes {
     public long seqNum;
     public long ackNum;
@@ -11,7 +16,16 @@ public class CoAP_mes_TCP extends CoAP_mes {
         this.ackNum = ackNum;
         this.payloadLength = payloadLength;
     }
-//    public static boolean check(CoAP_mes_TCP mes, CoAP_mes_TCP ack) {
-//
-//    }
+    // payload长度 = ipv4报文总长度 - ipv4报文头部 - TCP头部
+    public static int GetTCPPayloadLength(Packet packet) {
+        int length = 0;
+        try {
+            IPv4Packet iPv4Packet = (IPv4Packet)packet.getPacket(Protocol.IPv4);
+            TCPPacket tcpPacket = (TCPPacket) packet.getPacket(Protocol.TCP);
+            length = iPv4Packet.getTotalIPLength() - iPv4Packet.getHeaderLength() - tcpPacket.getHeaderLength();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return  length;
+    }
 }

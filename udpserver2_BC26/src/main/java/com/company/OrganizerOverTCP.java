@@ -26,6 +26,7 @@ public class OrganizerOverTCP extends Thread {
             ServerSocket serverSocket = new ServerSocket(5701);
             if(model == Main.NB_TCPSocket_connectID) {
                 Main.TCPSocket = serverSocket.accept();
+                System.out.println("new accept");
             }
 
             String OpenTcp = "AT+QIOPEN=1," +  model + ",\"TCP\",\"39.107.84.110\",5800,0,1";

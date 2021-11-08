@@ -8,14 +8,22 @@ public class runanjaysh {
     public static void main(String[] args) throws IOException, InterruptedException {
             regAnjay reg = new regAnjay();
             killanjay kil = new killanjay();
-            for(int i = 0; i < 5400; i++)
-            {
-                reg.run();
-                Thread.sleep(8000);
-                kil.run();
-                Thread.sleep(2000);
-                System.out.println(i);
+
+            int min = 60; //每轮跑50分钟
+            for(int i = 10; i <= 30; i += 2) {
+                reg.model = i;
+                int count = min * 60 / i;
+                for(int j = 0; j < count; j++) {
+                    System.out.println("model is " + i + "count is " + j + "/" +count);
+                    reg.count = j;
+                    reg.run();
+                    Thread.sleep((i - 2) * 1000);
+                    kil.run();
+                    Thread.sleep(2*1000);
+                }
             }
+
+
     }
 
 }
