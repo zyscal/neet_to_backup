@@ -9,8 +9,8 @@ public class runanjaysh {
             regAnjay reg = new regAnjay();
             killanjay kil = new killanjay();
 
-            int min = 60; //每轮跑50分钟
-            for(int i = 10; i <= 30; i += 2) {
+            int min = 12*60; //每轮跑50分钟
+            for(int i = 16; i <= 16; i += 2) {
                 reg.model = i;
                 int count = min * 60 / i;
                 for(int j = 0; j < count; j++) {

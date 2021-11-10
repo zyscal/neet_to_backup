@@ -415,9 +415,65 @@ public class data_analy {
          * 20211108 tcp 多个时间频率注册
          */
 //        NB_IoT_TCP_REG_20211108();
-        NB_IoT_TCP_REG_20211108_2();
+//        NB_IoT_TCP_REG_20211108_2();
+
+        /**
+         * 20211109 tcp 多个频率注册
+         */
+//        NB_IoT_TCP_REG_20211109();
+
+        /**
+         * 20211110 tcp 1/16 QPS 注册
+         */
+        NB_IoT_TCP_REG_20211110();
+    }
+
+    public static void NB_IoT_TCP_REG_20211110() {
+        NB_CoAP_REG_TCP nb_coAP_reg_tcp = new NB_CoAP_REG_TCP();
+        String Server_RTT_FileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211110TCP/Server_reg_rtt.pcap";
+        String Server_RTT = "src/20211110RegOverTCP/ServerRegRTT.txt";
+        String Server_Datetime = "src/20211110RegOverTCP/ServerRegDateTime.txt";
+        String Server_log = "src/20211110RegOverTCP/Server_log.txt";
+        String Server_packet_loss = "src/20211110RegOverTCP/Server_packet_loss.txt";
+        nb_coAP_reg_tcp.RegRTTFromServer(0, 5800, Server_RTT_FileName, Server_RTT, Server_Datetime, Server_log, Server_packet_loss);
+
+        String Client_RTT_FileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211110TCP/Client_reg_rtt.pcap";
+        String Client_RTT = "src/20211110RegOverTCP/ClientRegRTT.txt";
+        String Client_DateTime = "src/20211110RegOverTCP/ClientRegDateTime.txt";
+        String Client_log_file = "src/20211110RegOverTCP/Client_log.txt";
+        nb_coAP_reg_tcp.RegRTTFromClient(5700, 5701, Client_RTT_FileName, Client_RTT, Client_DateTime, Client_log_file);
+
+        String Client_Retransmission = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211110TCP/Client_retransmission.pcap";
+        String RetransmissionDatetimeFileName = "src/20211110RegOverTCP/ClientRetransmissions.txt";
+        nb_coAP_reg_tcp.FindClientRetransmission(Client_Retransmission, 5701, Client_RTT_FileName, RetransmissionDatetimeFileName);
 
     }
+
+
+    public static void NB_IoT_TCP_REG_20211109() {
+        NB_CoAP_REG_TCP nb_coAP_reg_tcp = new NB_CoAP_REG_TCP();
+        String Server_RTT_FileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211109TCP/Server_reg_rtt.pcap";
+        String Server_RTT = "src/20211109RegOverTCP/ServerRegRTT.txt";
+        String Server_Datetime = "src/20211109RegOverTCP/ServerRegDateTime.txt";
+        String Server_log = "src/20211109RegOverTCP/Server_log.txt";
+        String Server_packet_loss = "src/20211109RegOverTCP/Server_packet_loss.txt";
+        nb_coAP_reg_tcp.RegRTTFromServer(0, 5800, Server_RTT_FileName, Server_RTT, Server_Datetime, Server_log, Server_packet_loss);
+
+        String Client_RTT_FileName = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211109TCP/Client_reg_rtt.pcap";
+        String Client_RTT = "src/20211109RegOverTCP/ClientRegRTT.txt";
+        String Client_DateTime = "src/20211109RegOverTCP/ClientRegDateTime.txt";
+        String Client_log_file = "src/20211109RegOverTCP/Client_log.txt";
+        nb_coAP_reg_tcp.RegRTTFromClient(5700, 5701, Client_RTT_FileName, Client_RTT, Client_DateTime, Client_log_file);
+
+        String Client_Retransmission = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211109TCP/Client_retransmission.pcap";
+        String RetransmissionDatetimeFileName = "src/20211109RegOverTCP/ClientRetransmissions.txt";
+        nb_coAP_reg_tcp.FindClientRetransmission(Client_Retransmission, 5701, Client_RTT_FileName, RetransmissionDatetimeFileName);
+
+        String Server_Retransmission = "/home/zyscal/Documents/need_to_backup/need_to_backup/wiresahrk_caught/20211109TCP/Server_retransmission.pcap";
+        String Server_Retransmission_file = "src/20211109RegOverTCP/ServerRetransmissions.txt";
+        nb_coAP_reg_tcp.FindServerRetransmission(Server_Retransmission, Server_Retransmission_file);
+    }
+
 
     public static void NB_IoT_TCP_REG_20211108_2() {
         NB_CoAP_REG_TCP nb_coAP_reg_tcp = new NB_CoAP_REG_TCP();
