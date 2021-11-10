@@ -1,3 +1,4 @@
+total con is : 5401
 size of UpLinkArray : 0
 AVG() : 2057.1497870764674
 count of Retransmission is : 0

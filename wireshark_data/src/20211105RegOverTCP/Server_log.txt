@@ -1,3 +1,4 @@
 packet loss count : 1
 tcp downlink count : 5403
 packet loss rate : 1.8508236E-4
+AVG() RTT : 1800.7273

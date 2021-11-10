@@ -178,6 +178,7 @@ public class NB_CoAP_RTT {
                     cal_rtt_para.setRetransmission_cause_of_small_RTO(cal_rtt_para.getRetransmission_cause_of_small_RTO() + count - 1);
                 }
             });
+            pcap.close();
             System.out.println("CON_list length : " + CON_list.size());
             System.out.println("ACK_list length : " + ACK_list.size());
             System.out.println("all CONs : " + cal_rtt_para.getAll_CON());

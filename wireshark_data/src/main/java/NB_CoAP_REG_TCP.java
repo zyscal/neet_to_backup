@@ -25,11 +25,18 @@ public class NB_CoAP_REG_TCP {
     private long sumRTT = 0;
     // matchCount 上下行数据包匹配的对数
     private int matchCount = 0;
+    // 用于保存所有测试样例循环次数
+    private int ALL_test_count = 0;
+
     // 用于计算con的数量
     private int conCount = 0;
-
     // 用于计算ack的数量
     private int ackCount = 0;
+    // 用于 rtt总值
+    private int ALLRTT = 0;
+    // 用于计算重传数量
+    private int retransmisstions = 0;
+
     NB_CoAP_REG_TCP() {
 
     }
@@ -41,6 +48,7 @@ public class NB_CoAP_REG_TCP {
             BufferedWriter out_log = new BufferedWriter(new FileWriter(out_log_file));
 
             sumRTT = 0;
+            conCount = 0;
             matchCount = 0;
             ArrayList<CoAP_mes> UpLinkMessage = new ArrayList<>();
             HashMap<String, Integer> UpLinkMessageHash = new HashMap<>();
@@ -52,7 +60,6 @@ public class NB_CoAP_REG_TCP {
                     TransportPacket transportPacket = (TransportPacket)packet.getPacket(Protocol.TCP);
                     if(transportPacket.hasProtocol(Protocol.TCP)) {
                     } else {
-                        System.out.println("no tcp");
                         return false;
                     }
                     Buffer Coap = transportPacket.getPacket(Protocol.TCP).getPayload();
@@ -62,6 +69,7 @@ public class NB_CoAP_REG_TCP {
                     CoAP_mes Mes = new CoAP_mes(transportPacket.getPacket(Protocol.TCP).getArrivalTime(), transportPacket.getDestinationPort(),
                             transportPacket.getSourcePort(), 0, token);
                     if(transportPacket.getDestinationPort() == ComPort) { // 上行的注册消息
+                        conCount++;
                         UpLinkMessage.add(Mes);
                         byte[] mid = new byte[0];
                         String key = CoAP_mes.make_KEY(mid, token);
@@ -93,8 +101,10 @@ public class NB_CoAP_REG_TCP {
                     return true;
                 }
             });
+            ALL_test_count = matchCount;
             out_Reg_TCP_fileName.close();
             out_Reg_TCP_datetime_filename.close();
+            out_log.write("total con is : " + conCount +"\n");
             out_log.write("size of UpLinkArray : " + UpLinkMessage.size() + "\n");
             out_log.write("AVG() : " + (double)sumRTT / (double) matchCount + "\n");
             int countOfRetransmission = 0;
@@ -120,6 +130,8 @@ public class NB_CoAP_REG_TCP {
 
             conCount = 0;
             ackCount = 0;
+            matchCount = 0;
+            ALLRTT = 0;
             ArrayList<CoAP_mes_TCP> DownLinkMessage = new ArrayList<>();
 
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy,MM,dd,H,m,s,S");
@@ -140,15 +152,16 @@ public class NB_CoAP_REG_TCP {
                     } else if(tcpPacket.getDestinationPort() == analyzerPort) { // 上行ACK
                         for(int i = 0; i < DownLinkMessage.size(); i++) {
                             if(DownLinkMessage.get(i).seqNum + DownLinkMessage.get(i).payloadLength == tcpPacket.getAcknowledgementNumber()) {
+                                matchCount++;
                                 out_Reg_TCP_fileName.write((tcpPacket.getArrivalTime() - DownLinkMessage.get(i).getArrive_date()) / 1000 + "\n");
                                 out_Reg_TCP_datetime_filename.write(formatter.format(new Date(DownLinkMessage.get(i).getArrive_date() / 1000)) + "\n");
+                                ALLRTT += (tcpPacket.getArrivalTime() - DownLinkMessage.get(i).getArrive_date()) / 1000;
                                 DownLinkMessage.remove(i);
                                 break;
                             }
                         }
                         ackCount++;
                     }
-                    System.out.println(conCount + "/" + ackCount);
                     return true;
                 }
             });
@@ -158,6 +171,7 @@ public class NB_CoAP_REG_TCP {
             out_Server_Log.write("packet loss count : " + DownLinkMessage.size() + "\n");
             out_Server_Log.write("tcp downlink count : " + conCount + "\n");
             out_Server_Log.write("packet loss rate : " + (float)DownLinkMessage.size() / (float)conCount + "\n");
+            out_Server_Log.write("AVG() RTT : " + (float)ALLRTT / (float)matchCount + "\n");
             out_Reg_TCP_fileName.close();
             out_Reg_TCP_datetime_filename.close();
             out_Server_Log.close();
@@ -170,6 +184,8 @@ public class NB_CoAP_REG_TCP {
     void FindClientRetransmission (String ServerRecv, int dstPort, String ClientSend, String RetransmissionDatetimeFileName) {
         BufferedWriter dateTime;
         try {
+            conCount = 0;
+            retransmisstions = 0;
             dateTime = new BufferedWriter(new FileWriter(RetransmissionDatetimeFileName));
             ArrayList<CoAP_mes> ClientSendList = new ArrayList<>();
             Pcap pcap = Pcap.openStream(ClientSend);
@@ -188,11 +204,11 @@ public class NB_CoAP_REG_TCP {
                         CoAP_mes coAP_mes = new CoAP_mes(tcpPacket.getArrivalTime(), tcpPacket.getDestinationPort(), tcpPacket.getSourcePort(),
                                 0, token);
                         ClientSendList.add(coAP_mes);
+                        conCount++;
                     }
                     return true;
                 }
             });
-            System.out.println("length of client send is ： " + ClientSend.length());
 
             pcap = Pcap.openStream(ServerRecv);
             pcap.loop(new PacketHandler() {
@@ -208,12 +224,15 @@ public class NB_CoAP_REG_TCP {
                     for(CoAP_mes i : ClientSendList) {
                         if(CoAP_mes.tokenMatch(i.getToken(), token)) {
                             dateTime.write(formatter.format(new Date(i.getArrive_date() / 1000)) + "\n");
+                            retransmisstions++;
                             break;
                         }
                     }
                     return true;
                 }
             });
+            pcap.close();
+            System.out.println("Client 重传率是 ： " + (float) retransmisstions / (float) conCount);
             dateTime.close();
         } catch (Exception e) {
             System.out.println(e);
@@ -224,15 +243,22 @@ public class NB_CoAP_REG_TCP {
         try {
             BufferedWriter RetransmissionDatetime = new BufferedWriter(new FileWriter(RetransmissionDatetimeFileName));
             Pcap pcap = Pcap.openStream(ServerSend);
+            conCount = 0;
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy,MM,dd,H,m,s,S");
             pcap.loop(new PacketHandler() {
                 @Override
                 public boolean nextPacket(Packet packet) throws IOException {
                     RetransmissionDatetime.write(formatter.format(packet.getArrivalTime() / 1000) + "\n");
+                    conCount++;
                     return true;
                 }
             });
             RetransmissionDatetime.close();
+            if(ALL_test_count == 0) {
+                System.out.println("获取所有测试样例次数失败，请先跑client rtt");
+            } else {
+                System.out.println("Server 重传率 ： " + (float)conCount / (float) ALL_test_count);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
